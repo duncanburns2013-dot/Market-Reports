@@ -32,7 +32,7 @@ nav[data-nc-container] {
 html,body{width:100%;height:100%;margin:0;padding:0;font-family:'Inter',sans-serif;background:#111;color:var(--text);overflow:hidden}
 
 /* ===== FLIPBOOK CONTAINER ===== */
-.flipbook{width:100vw;height:100vh;position:relative;perspective:2400px;overflow:hidden;cursor:grab}
+.flipbook{width:100vw;height:100vh;position:relative;perspective:2400px;overflow:hidden;cursor:grab;color:var(--text) !important}
 .fp{position:absolute;inset:0;width:100%;height:100%;overflow-y:auto;overflow-x:hidden;transform-origin:left center;transition:transform .7s cubic-bezier(.645,.045,.355,1),box-shadow .7s ease;backface-visibility:hidden;transform-style:preserve-3d;z-index:1;background:#f0f0f0}
 .fp::after{content:'';position:absolute;right:0;top:0;bottom:0;width:30px;background:linear-gradient(to left,rgba(0,0,0,.06),transparent);pointer-events:none;z-index:10}
 .fp.flipped{transform:rotateY(-150deg);box-shadow:none;pointer-events:none}
@@ -120,17 +120,17 @@ html,body{width:100%;height:100%;margin:0;padding:0;font-family:'Inter',sans-ser
 /* ===== AFFORDABILITY ===== */
 .afford-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:16px 0}
 .afford-table{background:#fff;border-radius:10px;padding:16px;border:1px solid #e2e8f0;overflow:hidden}
-.afford-table h3{font-size:13px;color:var(--navy);font-weight:600;margin-bottom:10px}
+.afford-table h3{font-size:13px;color:var(--navy) !important;font-weight:600;margin-bottom:10px}
 table.at{width:100%;border-collapse:collapse;font-size:12px}
-table.at th{text-align:left;padding:6px 8px;border-bottom:2px solid var(--navy);color:var(--navy);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
-table.at td{padding:6px 8px;border-bottom:1px solid #f1f5f9}
+table.at th{text-align:left;padding:6px 8px;border-bottom:2px solid var(--navy);color:var(--navy) !important;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+table.at td{padding:6px 8px;border-bottom:1px solid #f1f5f9;color:var(--text) !important}
 table.at tr:last-child td{border:none}
 table.at td:not(:first-child){text-align:right;font-weight:500}
 .afford-chart-wrap{background:#fff;border-radius:10px;padding:16px;border:1px solid #e2e8f0}
-.afford-chart-wrap h3{font-size:13px;color:var(--navy);font-weight:600;margin-bottom:10px}
-.afford-insight{background:var(--navy);color:#fff;border-radius:10px;padding:16px;grid-column:1/-1}
-.afford-insight h3{font-size:13px;font-weight:600;margin-bottom:6px;color:var(--sky)}
-.afford-insight p{font-size:13px;line-height:1.7;opacity:.85}
+.afford-chart-wrap h3{font-size:13px;color:var(--navy) !important;font-weight:600;margin-bottom:10px}
+.afford-insight{background:var(--navy);color:#fff !important;border-radius:10px;padding:16px;grid-column:1/-1}
+.afford-insight h3{font-size:13px;font-weight:600;margin-bottom:6px;color:var(--sky) !important}
+.afford-insight p{font-size:13px;line-height:1.7;opacity:.85;color:#fff !important}
 
 /* ===== INTERACTIVE HOVER EFFECTS ===== */
 .stat{transition:transform .2s,box-shadow .2s}
@@ -151,25 +151,27 @@ table.at tbody tr:hover{background:rgba(201,235,252,.2)!important}
 .agent-page::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(225,235,245,.82),rgba(210,228,244,.75));z-index:1}
 .agent-section{display:flex;gap:48px;align-items:center;flex-wrap:wrap;margin:24px 0}
 .agent-photo{width:240px;height:240px;border-radius:50%;object-fit:cover;border:5px solid var(--sky);flex-shrink:0;box-shadow:0 8px 32px rgba(30,51,94,.15)}
-.agent-info h3{font-family:'Playfair Display',serif;font-size:32px;color:var(--navy);margin-bottom:4px}
-.agent-info .agent-title{font-size:14px;color:var(--gold);font-weight:600;margin-bottom:14px}
-.agent-info p{font-size:14px;color:var(--text2);line-height:1.8;max-width:540px}
-.agent-contact{margin-top:16px;font-size:14px;color:var(--text2)}
-.agent-contact a{color:var(--navy);text-decoration:none;font-weight:500}
-.agent-cta{display:inline-block;margin-top:20px;background:var(--navy);color:#fff;padding:12px 32px;border-radius:30px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.5px;transition:background .2s}
+.agent-info h3{font-family:'Playfair Display',serif;font-size:32px;color:var(--navy) !important;margin-bottom:4px}
+.agent-info .agent-title{font-size:14px;color:var(--gold) !important;font-weight:600;margin-bottom:14px}
+.agent-info p{font-size:14px;color:var(--text2) !important;line-height:1.8;max-width:540px}
+.agent-contact{margin-top:16px;font-size:14px;color:var(--text2) !important}
+.agent-contact a{color:var(--navy) !important;text-decoration:none;font-weight:500}
+.agent-cta{display:inline-block;margin-top:20px;background:var(--navy);color:#fff !important;padding:12px 32px;border-radius:30px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.5px;transition:background .2s}
 .agent-cta:hover{background:#2a4478}
 
 /* ===== BACK COVER ===== */
 .back-cover{background:var(--navy);color:#fff !important;min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .back-cover *{color:#fff !important}
 
-/* Override Squarespace's global text color inside flipbook */
-.flipbook h1,.flipbook h2,.flipbook h3,.flipbook h4,.flipbook h5,.flipbook h6,
-.flipbook p,.flipbook span,.flipbook div,.flipbook a,.flipbook li {
-  color:inherit !important;
-}
+/* Override Squarespace's text color resets — targeted, not blanket */
 .flipbook .cover *,.flipbook .back-cover *{color:#fff !important}
 .flipbook .hero-banner-content,.flipbook .hero-banner-content *{color:#fff !important}
+.flipbook .afford-insight,.flipbook .afford-insight *{color:#fff !important}
+.flipbook .afford-insight h3{color:var(--sky) !important}
+.flipbook .agent-info h3{color:var(--navy) !important}
+.flipbook .agent-info p{color:var(--text2) !important}
+.flipbook .agent-contact a{color:var(--navy) !important}
+.flipbook .nav button,.flipbook .nav span{color:#fff !important}
 .back-cover .cover-bg{opacity:.12}
 .back-cover-content{position:relative;z-index:2;text-align:center;padding:60px 40px}
 
