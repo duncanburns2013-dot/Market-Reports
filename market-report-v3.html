@@ -9,7 +9,27 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1e335e;--sky:#c9ebfc;--gold:#c8a44e;--white:#fff;--cream:#f5f7fa;--text:#1a1a2e;--text2:#475569;--text3:#94a3b8;--red:#dc2626;--green:#16a34a}
-html,body{width:100%;height:100%;margin:0;font-family:'Inter',sans-serif;background:#111;color:var(--text);overflow:hidden}
+
+/* Hide Squarespace header/footer/nav for fullscreen flipbook */
+header,#header,.header,.Header,.site-header,
+footer,#footer,.footer,.Footer,.site-footer,
+.header-announcement-bar-wrapper,
+.sqs-announcement-bar-dropzone,
+#siteWrapper>header,
+#siteWrapper>footer,
+.header-menu,.header-nav,
+nav[data-nc-container] {
+  display:none !important;
+}
+#page,#content,.content-wrapper,.sqs-layout,
+.page-section,.content,.main-content,
+#siteWrapper,.Site,.Site-inner {
+  padding:0 !important;
+  margin:0 !important;
+  max-width:none !important;
+  width:100% !important;
+}
+html,body{width:100%;height:100%;margin:0;padding:0;font-family:'Inter',sans-serif;background:#111;color:var(--text);overflow:hidden}
 
 /* ===== FLIPBOOK CONTAINER ===== */
 .flipbook{width:100vw;height:100vh;position:relative;perspective:2400px;overflow:hidden;cursor:grab}
@@ -721,6 +741,23 @@ mkB('c8',
    {label:'Income Needed',data:[123300,139071,161529,181132,181446,199843,207771,239259],backgroundColor:navy}],
   true
 );
+
+// Hide any remaining Squarespace chrome (header/footer/nav)
+(function(){
+  var sels=['header','footer','.header','.Header','.footer','.Footer',
+    '.header-announcement-bar-wrapper','nav[data-nc-container]',
+    '.sqs-announcement-bar-dropzone','.header-menu'];
+  sels.forEach(function(s){
+    document.querySelectorAll(s).forEach(function(el){
+      if(!el.closest('.flipbook')) el.style.display='none';
+    });
+  });
+  // Ensure body is fullscreen
+  document.body.style.overflow='hidden';
+  document.body.style.margin='0';
+  document.body.style.padding='0';
+  document.documentElement.style.overflow='hidden';
+})();
 </script>
 </body>
 </html>
