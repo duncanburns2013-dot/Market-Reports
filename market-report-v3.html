@@ -86,15 +86,15 @@ html,body{width:100%;height:100%;margin:0;font-family:'Inter',sans-serif;backgro
 .town-card .yoy{font-size:13px;font-weight:600}
 
 /* ===== LISTINGS ===== */
-.listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0}
+.listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
 .listing-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e2e8f0;cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;color:inherit;display:block}
 .listing-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.1)}
-.listing-img{width:100%;height:200px;object-fit:cover}
-.listing-body{padding:14px}
-.listing-price{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);font-weight:700}
-.listing-addr{font-size:12px;color:var(--text2);margin-top:2px}
-.listing-details{display:flex;gap:12px;margin-top:8px;font-size:12px;color:var(--text2)}
-.listing-agent{font-size:11px;color:var(--text3);margin-top:8px;padding-top:8px;border-top:1px solid #eee}
+.listing-img{width:100%;height:160px;object-fit:cover}
+.listing-body{padding:10px 14px}
+.listing-price{font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);font-weight:700}
+.listing-addr{font-size:11px;color:var(--text2);margin-top:1px}
+.listing-details{display:flex;gap:12px;margin-top:5px;font-size:11px;color:var(--text2)}
+.listing-agent{font-size:10px;color:var(--text3);margin-top:5px;padding-top:5px;border-top:1px solid #eee}
 
 /* ===== AFFORDABILITY ===== */
 .afford-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:16px 0}
@@ -160,6 +160,28 @@ table.at tbody tr:hover{background:rgba(201,235,252,.2)!important}
   .town-grid,.listing-grid{grid-template-columns:1fr}
   .stats-row{grid-template-columns:repeat(2,1fr)}
 }
+/* ===== SQUARESPACE EDITOR SAFEGUARD ===== */
+/* When in SQS editor, collapse the flipbook so code block controls are accessible */
+.sqs-edit-mode .flipbook,
+.sqs-layout-editing .flipbook,
+body.sqs-edit-mode-active .flipbook {
+  height:400px !important;
+  overflow:hidden !important;
+  position:relative !important;
+}
+.sqs-edit-mode .fp,
+.sqs-layout-editing .fp,
+body.sqs-edit-mode-active .fp {
+  position:relative !important;
+  height:auto !important;
+  display:none !important;
+}
+.sqs-edit-mode .fp:first-child,
+.sqs-layout-editing .fp:first-child,
+body.sqs-edit-mode-active .fp:first-child {
+  display:block !important;
+}
+
 </style>
 </head>
 <body>
@@ -315,7 +337,7 @@ table.at tbody tr:hover{background:rgba(201,235,252,.2)!important}
 <!-- ========== PAGE 9: FEATURED LISTINGS ========== -->
 <div class="fp" data-label="Listings">
 <div class="page-inner" style="min-height:100vh">
-  <div class="hero-banner" style="min-height:35vh">
+  <div class="hero-banner" style="min-height:22vh">
     <img class="hero-banner-bg" src="https://images.squarespace-cdn.com/content/5a441bcdaeb625d8aac72bff/b13f31b6-3edc-4743-b149-0614755f529b/photo+%285%29.jpeg?content-type=image%2Fjpeg" alt="">
     <div class="hero-banner-overlay" style="background:linear-gradient(0deg,rgba(30,51,94,.95) 20%,rgba(30,51,94,.5))"></div>
     <div class="hero-banner-content" style="max-width:100%;width:100%;padding-top:80px">
