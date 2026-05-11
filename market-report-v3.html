@@ -83,10 +83,10 @@ html,body{width:100%;height:100%;margin:0;padding:0;font-family:'Inter',sans-ser
 .data-page .section{position:relative;z-index:1}
 
 /* ===== STATS ===== */
-.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0}
-.stat{background:rgba(255,255,255,.92);border-radius:12px;padding:22px 16px;text-align:center;border:1px solid #e2e8f0;box-shadow:0 2px 10px rgba(0,0,0,.04);backdrop-filter:blur(4px)}
-.stat-val{font-family:'Playfair Display',serif;font-size:clamp(26px,3.2vw,40px);color:var(--navy) !important;font-weight:700}
-.stat-lbl{font-size:10px;color:var(--text2) !important;text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:12px 0}
+.stat{background:rgba(255,255,255,.92);border-radius:10px;padding:14px 12px;text-align:center;border:1px solid #e2e8f0;box-shadow:0 2px 10px rgba(0,0,0,.04);backdrop-filter:blur(4px)}
+.stat-val{font-family:'Playfair Display',serif;font-size:clamp(22px,2.8vw,34px);color:var(--navy) !important;font-weight:700}
+.stat-lbl{font-size:9px;color:var(--text2) !important;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
 .stat-chg{font-size:12px;margin-top:5px;font-weight:600}
 .stat-chg.up{color:var(--green)}.stat-chg.down{color:var(--red)}
 
@@ -98,13 +98,13 @@ html,body{width:100%;height:100%;margin:0;padding:0;font-family:'Inter',sans-ser
 .chart-canvas canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
 
 /* ===== TOWN GRID ===== */
-.town-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.town-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0}
 .town-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e2e8f0;cursor:default}
-.town-card-img{width:100%;height:150px;object-fit:cover}
-.town-card-body{padding:16px;text-align:center}
-.town-card h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--navy) !important;font-weight:600}
-.town-card .price{font-size:26px;font-weight:700;color:var(--navy) !important;margin:6px 0}
-.town-card .yoy{font-size:13px;font-weight:600}
+.town-card-img{width:100%;height:110px;object-fit:cover}
+.town-card-body{padding:8px;text-align:center}
+.town-card h3{font-family:'Playfair Display',serif;font-size:14px;color:var(--navy) !important;font-weight:600}
+.town-card .price{font-size:20px;font-weight:700;color:var(--navy) !important;margin:3px 0}
+.town-card .yoy{font-size:11px;font-weight:600}
 
 /* ===== LISTINGS ===== */
 .listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0}
@@ -316,11 +316,11 @@ body.sqs-edit-mode-active .fp:first-child {
 <div class="fp" data-label="Gr. Newburyport">
 <div class="page-inner data-page bg-pattern" style="background:var(--cream);min-height:100vh">
   <img class="pg-photo" src="https://images.squarespace-cdn.com/content/5a441bcdaeb625d8aac72bff/60c4ccc9-f876-4ebe-93ab-b0957bc140ed/photo+%288%29.jpeg?content-type=image%2Fjpeg" alt="">
-  <div class="section">
+  <div class="section" style="padding-top:20px;padding-bottom:10px">
     <div class="section-label">Featured Market</div>
     <div class="section-title">Greater Newburyport</div>
     <div class="section-sub">Q1 2026 — town-by-town snapshot</div>
-    <div class="stats-row" style="margin-bottom:16px">
+    <div class="stats-row" style="margin-bottom:8px">
       <div class="stat"><div class="stat-val">$852K</div><div class="stat-lbl">Region Avg Price</div></div>
       <div class="stat"><div class="stat-val">442</div><div class="stat-lbl">Sales (12mo)</div></div>
       <div class="stat"><div class="stat-val">$427</div><div class="stat-lbl">Price / Sq Ft</div></div>
